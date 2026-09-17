@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
           >
             {/* Light Mode Logo */}
             <img
-              src="/img.jpg"
+              src="/image.jpg"
               alt="6T4 Bits"
               className="h-20 w-auto object-contain dark:hidden"
             />
