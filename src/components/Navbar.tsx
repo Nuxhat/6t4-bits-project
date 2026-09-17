@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Logo } from './Logo';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from '../context/LanguageContext';
@@ -15,7 +14,9 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -29,7 +30,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <motion.header
-      initial={{ y: "-100%" }}
+      initial={{ y: '-100%' }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -40,20 +41,28 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
+
           {/* Brand Logo */}
           <motion.a
             href="#"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 focus:outline-none"
+            className="flex items-center focus:outline-none"
             aria-label="6T4 Bits Home"
           >
-          <img
-  src="/New%20logo.png"
-  alt="6T4 Bits"
-  className="h-20 w-auto object-contain"
-/>
+            {/* Light Mode Logo */}
+            <img
+              src="/img.jpg"
+              alt="6T4 Bits"
+              className="h-20 w-auto object-contain dark:hidden"
+            />
+
+            {/* Dark Mode Logo */}
+            <img
+              src="/New%20logo.png"
+              alt="6T4 Bits"
+              className="hidden h-20 w-auto object-contain dark:block"
+            />
           </motion.a>
 
           {/* Desktop Nav Links */}
@@ -64,7 +73,7 @@ export const Navbar: React.FC = () => {
                 href={link.href}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + (i * 0.1) }}
+                transition={{ delay: 0.2 + i * 0.1 }}
                 whileHover={{ scale: 1.05 }}
                 className="text-sm font-semibold text-[var(--text-body)] hover:text-[var(--brand-primary)] transition-colors inline-block"
               >
@@ -76,7 +85,9 @@ export const Navbar: React.FC = () => {
           {/* Right Action CTA, Language Toggle & Theme Toggle */}
           <div className="hidden sm:flex items-center gap-3">
             <LanguageToggle />
+
             <ThemeToggle />
+
             <a
               href="#contact"
               className="px-6 py-2.5 rounded-full text-sm font-semibold text-[#ffffff] bg-[var(--brand-primary)] hover:bg-[var(--brand-primary-hover)] transition-all shadow-[var(--neu-flat-sm)] active:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.3)]"
@@ -85,16 +96,22 @@ export const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Right Controls: Language Toggle, Theme Toggle & Menu Hamburger */}
+          {/* Mobile Right Controls */}
           <div className="flex sm:hidden items-center gap-2">
             <LanguageToggle />
+
             <ThemeToggle />
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
               className="p-2 rounded-xl bg-[var(--bg-surface)] text-[var(--text-body)] hover:text-[var(--text-heading)] shadow-[var(--neu-flat-sm)] focus:outline-none active:shadow-[var(--neu-pressed-xs)] transition-colors duration-300"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -113,14 +130,21 @@ export const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
+
               <div className="pt-2 flex items-center justify-between px-2 border-t border-[var(--divider)]">
-                <span className="text-sm font-semibold text-[var(--text-body)]">{t.nav.language}</span>
+                <span className="text-sm font-semibold text-[var(--text-body)]">
+                  {t.nav.language}
+                </span>
                 <LanguageToggle showLabel />
               </div>
+
               <div className="pt-2 flex items-center justify-between px-2 border-t border-[var(--divider)]">
-                <span className="text-sm font-semibold text-[var(--text-body)]">{t.nav.theme}</span>
+                <span className="text-sm font-semibold text-[var(--text-body)]">
+                  {t.nav.theme}
+                </span>
                 <ThemeToggle showLabel />
               </div>
+
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
