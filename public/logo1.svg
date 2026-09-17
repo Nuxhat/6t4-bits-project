@@ -1,0 +1,38 @@
+<svg viewBox="0 0 340 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoBlueGradient" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="logoPurpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+  </defs>
+
+  <!-- 6 Glyph -->
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M152 64 C140 28 108 8 72 16 C34 26 12 62 12 110 C12 168 38 210 88 210 C130 210 160 178 160 136 C160 94 130 68 88 68 C68 68 50 78 40 92 C41 60 58 38 84 32 C104 27 122 36 132 56 C136 64 145 68 153 64 C161 60 164 51 152 64 Z M42 138 C42 116 58 100 86 100 C114 100 128 116 128 138 C128 160 112 178 86 178 C60 178 42 160 42 138 Z"
+    fill="url(#logoBlueGradient)"
+  />
+
+  <!-- 4 Glyph -->
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M272 14 C272 6.5 265.5 0 258 0 C250.5 0 244 6.5 244 14 L244 116 L198 116 C188 116 180 124 180 134 C180 144 188 152 198 152 L244 152 L244 196 C244 203.5 250.5 210 258 210 C265.5 210 272 203.5 272 196 L272 152 L298 152 C306 152 312 145 312 137 C312 129 306 122 298 122 L272 122 L272 14 Z M244 56 L244 116 L206 116 L244 56 Z"
+    fill="url(#logoPurpleGradient)"
+  />
+
+  <!-- < bits > -->
+  <path d="M80 250 L64 266 L80 282" stroke="#7c3aed" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M106 234 L106 282 M106 260 C110 252 118 248 128 248 C140 248 148 256 148 266 C148 276 138 284 126 284 C116 284 110 280 106 274" stroke="#0f172a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <circle cx="166" cy="236" r="5" fill="#0f172a" />
+  <path d="M166 250 L166 282" stroke="#0f172a" stroke-width="9" stroke-linecap="round" />
+  <path d="M192 240 L192 278 C192 282 196 284 202 282 M184 250 L202 250" stroke="#0f172a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M236 254 C234 250 228 248 222 248 C216 248 212 252 212 256 C212 262 218 264 226 266 C234 268 240 272 240 276 C240 282 232 284 224 284 C216 284 210 280 208 276" stroke="#0f172a" stroke-width="8" stroke-linecap="round" fill="none" />
+  <path d="M260 250 L276 266 L260 282" stroke="#7c3aed" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
