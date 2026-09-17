@@ -3,8 +3,6 @@ import React from "react";
 interface LogoProps {
   className?: string;
   size?: "sm" | "md" | "lg" | "xl" | "custom";
-  variant?: "stacked" | "horizontal" | "icon";
-  showText?: boolean;
 }
 
 export const Logo: React.FC<LogoProps> = ({
@@ -30,11 +28,13 @@ export const Logo: React.FC<LogoProps> = ({
 
   return (
     <img
-     
+      src="/New%20logo.png"
+      alt="Logo"
       className={className}
       style={{
-        width: width ? `${width}px` : "100%",
+        width: width ? `${width}px` : "auto",
         height: "auto",
+        display: "block",
         objectFit: "contain",
       }}
     />

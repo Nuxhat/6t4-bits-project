@@ -49,14 +49,11 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-3 focus:outline-none"
             aria-label="6T4 Bits Home"
           >
-            <div className="w-10 h-10 rounded-xl bg-[var(--brand-primary)] text-[#ffffff] flex items-center justify-center p-1.5 shadow-[var(--neu-flat-sm)] transition-colors duration-300">
-              <Logo size="custom" variant="stacked" />
-            </div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-xl font-bold tracking-tight text-[var(--text-heading)] transition-colors duration-300">
-                6T4<span className="text-[var(--brand-primary)]">bits</span>
-              </span>
-            </div>
+          <img
+  src="/New%20logo.png"
+  alt="6T4 Bits"
+  className="h-20 w-auto object-contain"
+/>
           </motion.a>
 
           {/* Desktop Nav Links */}
